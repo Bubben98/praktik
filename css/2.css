@@ -3,6 +3,16 @@
     color: white;
     padding: 30px 0;
 }
+.bg-dark2 {
+    background-color: #2b2f33da !important;
+  }
+  .bg-light2 {
+    background-color: #d2d2d3d0 !important;
+  }
+
+  .text-faded {
+    color: rgba(255, 255, 255, 0.7);
+  }
 
 .bg-backDesignBottom {
       background-image: url("../img/header.jpg");
@@ -87,3 +97,29 @@
 .bg-back {
     background-color: #fcfcfc;
 }
+
+.btn1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 300px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .btn-xl {
+    padding: 1rem 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #F05F40;
+    border-color: #F05F40;
+  }
+  
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: #fff;
+    background-color: #ee4b28 !important;
+  }
+  
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+  }
