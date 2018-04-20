@@ -1,8 +1,7 @@
 
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-
+  font-family: Arial, sans-serif;
   background-image: url("../img/header.jpg");
   background-position: center center fixed;
   background-repeat: no-repeat;
@@ -39,7 +38,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+.bg-footer {
+  background-color: #2b2f33 !important;
+  color: white;
+  padding: 30px 0;
+}
+.bg-dark2 {
+  background-color: #2b2f33da !important;
+}
+.shadow {
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.bg-backDesignBottom {
+    background-image: url("../img/header.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -60,12 +83,9 @@ h6 {
 }
 
 .text-faded {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.877);
 }
 
-section {
-  padding: 8rem 0;
-}
 
 
 header.masthead {
@@ -121,8 +141,6 @@ header.masthead p {
 .service-box {
   max-width: 400px;
 }
-
-
 
 .text-primary {
   color: #F05F40 !important;
