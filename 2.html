@@ -28,18 +28,40 @@
 
   <body>
        
- <!-- Navigation -->
-      
-
 
  <!---content-->
  
-<div class="bg-backDesignBottom">
-        <div class="col-md-10 mx-auto text-center">
-            <img src="img/logo.png" class="img-fluid">
-        </div>
 
-        <div class="col-lg-3 col-md-6 mx-auto mb-4">               
+        <!-- <div class="col-md-10 mx-auto text-center">
+            <img src="img/logo.png" class="img-fluid">
+        </div> -->
+        <header class="masthead text-center text-white d-flex bg-header">
+                <div class="container my-auto">
+                  <div class="row">
+                    <div class="col-md-8 mx-auto bg-dark">
+                      <div class="col-md-10 mx-auto">
+                      <h1 class="text-uppercase">
+                        Sevärd
+                      </h1>
+                      <hr>
+                    </div>
+                      <div class="col-md-10 mx-auto">
+                        <p class=" mb-5">På den här hemsidan kan du söka upp sevärdheter när dig med hjälp av platstjänsten eller egna sökningar.
+                          Perfekt för turisten eller den som vill veta lite mer om delar av Sverige och dess sevärdheter!</p>
+                        <a class="btn btn1 btn-primary btn-xl js-scroll-trigger mb-2"  onclick="getLocation()"><i class="fa fa-map-marker"></i>  min position</a>
+                        <a class="btn btn1 btn-primary btn-xl js-scroll-trigger mb-2" href="#search"><i class="fa fa-search"></i>  sök position</a>       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </header>
+<section class="bg-light" id="search">     
+            <div class="col-md-10 mx-auto text-center py-5">
+                    <h1 class="text-uppercase">Huddinge</h1>  
+            </div>
+
+        <div class="col-lg-3 col-md-6 mx-auto mb-4"> 
+                            
                 <div class="input-group input-group-lg">
                         <input type="text" class="form-control" placeholder="Sök position"  >
                         <div class="input-group-append">                   
@@ -55,8 +77,10 @@
     <div class="container-fluid" >
         <div class="col-md-8 mx-auto mb-3 mt-3 bg-dark2 rounded shadow">                                    
             <div class="row">
-                <div class="col-lg-2 col-md-7 align-self-center text-center mx-auto img-fluid mt-2 mb-2 rounded">
-                    <img data-bind="attr:{src: image}">
+
+                <div class="col-lg-2 col-md-7 text-center mx-auto img-fluid mt-2 mb-2 rounded">
+                      <img data-bind="attr:{src: image}">
+
                 </div>
                 <div class="col-lg-10 col-md-12 align-self-center mt-2">
                     <div class="col-lg-10 col-md-12 text-center text-faded float-lg-left float-md-none mb-3">
@@ -64,7 +88,7 @@
                         <p data-bind="text: description"></p>                                                    
                     </div>
                     <div class="col-lg-3 col-md-6 mx-auto text-white float-lg-right float-md-none " >
-                        <a class="btn btn1 btn-primary btn-block mb-3" target="_blank" data-bind="attr:{href: link}">Read more</a> 
+                            <a class="btn btn1 btn-primary btn-block mb-3" target="_blank" data-bind="attr:{href: link}">Read more</a> 
                     </div> 
                 </div>
             </div>
@@ -73,7 +97,7 @@
 </div>
 
   
-
+</section>  
 
 
 
@@ -84,15 +108,11 @@
             </div>
         </div>   
     </footer>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  
-
-  
-
-    
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -113,10 +133,12 @@
     
     <!-- Own JavaScript -->
     <script defer="defer" src="js/2.js"></script>
+    <script src="js/creative.js"></script>
     <script defer="defer" src="js/footer.js"></script>
     
 
   </body>
 
-</html> 
-        
+
+</html>  
+
