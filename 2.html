@@ -47,30 +47,78 @@
                         </div>
                 </div>                          
         </div>
-        <!-- <div class="container-fluid">
-            <div class="col-md-8 mx-auto mb-3 mt-3 bg-light rounded shadow"> 
-                                            
-                <div class="row">
-                <div class="col-lg-2 col-md-7 text-center mx-auto">
-                                <img class="img-fluid mt-2 mb-2 rounded" src="https://d2x5ku95bkycr3.cloudfront.net/App_Themes/Common/images/profile/0_200.png">
-                    </div>
-                    <div class="col-lg-10 col-md-12 align-self-center mt-2">
-                            <div class="col-lg-10 col-md-12 text-center float-lg-left float-md-none mb-3">
-                                <h2 >Name</h2>
-                                <p>
-                                    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
-                                </p>
-                                                             
-                            </div>
-                                <div class="col-lg-3 col-md-6 mx-auto float-lg-right float-md-none " >
-                                    <a class="btn btn1 btn-primary btn-block mb-3" >Read more</a> 
-                                </div> 
-                         </div>
-                    </div>
-                </div>
-            </div> -->
+       
 
-            <div class="container-fluid">
+          
+
+<div data-bind="foreach: people">
+    <div class="container-fluid" >
+        <div class="col-md-8 mx-auto mb-3 mt-3 bg-dark2 rounded shadow">                                    
+            <div class="row">
+                <div class="col-lg-2 col-md-7 text-center mx-auto img-fluid mt-2 mb-2 rounded">
+                    <img class=" elementId2">
+                </div>
+                <div class="col-lg-10 col-md-12 align-self-center mt-2">
+                    <div class="col-lg-10 col-md-12 text-center text-faded float-lg-left float-md-none mb-3">
+                        <h2 data-bind="text: title"></h2>
+                        <p data-bind="text: description"></p>                                                    
+                    </div>
+                    <div class="col-lg-3 col-md-6 mx-auto text-white float-lg-right float-md-none " >
+                        <a class="btn btn1 btn-primary btn-block mb-3 " >Read more</a> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+
+
+
+
+    <footer class="bg-footer">
+        <div class="container">
+            <div class="col-lg-4 mx-auto text-center">
+                <div id="copyrightOutput"></div>
+            </div>
+        </div>   
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+
+  
+
+    
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+         
+    <!-- knockout JavaScript -->
+    <script src="js/knockout-3.4.2.js"></script>
+    <script>
+        console.log('running ko script')
+    var MyViewModel= function() {
+        this.people = ko.observableArray([
+            
+        ])
+    }
+    ko.applyBindings(MyViewModel);
+    </script>
+    
+    <!-- Own JavaScript -->
+    <script defer="defer" src="js/2.js"></script>
+    <script defer="defer" src="js/footer.js"></script>
+    
+
+  </body>
+
+</html>  <!-- <div class="container-fluid">
                     <div class="col-md-8 mx-auto mb-3 mt-3 bg-dark2 rounded shadow"> 
                                                     
                         <div class="row">
@@ -160,30 +208,29 @@
                 </div>
         </div>
     </div>
-</div>
-
-<div class="container-fluid">
-    <div class="col-md-8 mx-auto mb-3 mt-3 bg-dark2 rounded shadow"> 
-                                    
-        <div class="row">
-                <div class="col-lg-2 col-md-7 text-center mx-auto img-fluid mt-2 mb-2 rounded">
-                    <img class=" elementId2">
-                </div>
-            <div class="col-lg-10 col-md-12 align-self-center mt-2">
-                    <div class="col-lg-10 col-md-12 text-center text-faded float-lg-left float-md-none mb-3">
-                        <h2 class="elementId1"></h2>
-                        <p class="elementId4"></p>
-                                                     
+</div> -->
+ <!-- <div class="container-fluid">
+            <div class="col-md-8 mx-auto mb-3 mt-3 bg-light rounded shadow"> 
+                                            
+                <div class="row">
+                <div class="col-lg-2 col-md-7 text-center mx-auto">
+                                <img class="img-fluid mt-2 mb-2 rounded" src="https://d2x5ku95bkycr3.cloudfront.net/App_Themes/Common/images/profile/0_200.png">
                     </div>
-                        <div class="col-lg-3 col-md-6 mx-auto text-white float-lg-right float-md-none " >
-                            <a class="btn btn1 btn-primary btn-block mb-3 " >Read more</a> 
-                        </div> 
-            </div>
-        </div>
-    </div>
-</div>
-
-
+                    <div class="col-lg-10 col-md-12 align-self-center mt-2">
+                            <div class="col-lg-10 col-md-12 text-center float-lg-left float-md-none mb-3">
+                                <h2 >Name</h2>
+                                <p>
+                                    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                                </p>
+                                                             
+                            </div>
+                                <div class="col-lg-3 col-md-6 mx-auto float-lg-right float-md-none " >
+                                    <a class="btn btn1 btn-primary btn-block mb-3" >Read more</a> 
+                                </div> 
+                         </div>
+                    </div>
+                </div>
+            </div> -->
                     <!-- <div class="container-fluid">
                             <div class="col-md-8 mx-auto mb-3 mt-3 bg-light2 rounded shadow"> 
                                                             
@@ -267,29 +314,3 @@
         
     </div> -->
         
-    <footer class="bg-footer">
-        <div class="container">
-            <div class="col-lg-4 mx-auto text-center">
-                <div id="copyrightOutput"></div>
-            </div>
-        </div>   
-    </footer>
-    
-    <!-- Own JavaScript -->
-    <script src="js/2.js"></script>
-    <script src="js/footer.js"></script>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    
-
-  </body>
-
-</html>
