@@ -26,7 +26,9 @@ fetchSoch('http://kulturarvsdata.se/raa/bbrp/21620000011565').then(data => {
         // skriv ut specifikt element till HTML
         // document.querySelector('.elementId1').innerText = record['pres:itemLabel'];
         people.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
+
         link: record['pres:representations']['pres:representation'][0]['content']});
+
         // document.querySelector('.elementId2').src = record['pres:image']['pres:src'][0]['content'];
         // document.querySelector('.elementId2').value = record['pres:image']['pres:src'][0]['type'];
         // document.querySelector('.elementId3').href = record['pres:representations']['pres:representation'][0]['content'];
