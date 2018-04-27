@@ -1,4 +1,14 @@
-console.log('running 2.js')
+$(document).ready(function () {
+    var name = Cookies.get('_username');
+    if (name) {
+        $('#name').val(name);
+    }
+    $('#name').keyup(function () {
+        var inputName = $('#name').val();
+        Cookies.set('_username', inputName);
+    })
+   
+    console.log(name);
 
 const apiKey = 'pppt4';
 const fetchSoch = async (url) => await (await fetch(url, { headers: new Headers({ 'Accept': 'application/json' }) })).json();
@@ -14,7 +24,7 @@ fetchSoch('http://kulturarvsdata.se/raa/bbrp/21620000011565').then(data => {
     console.error(reason.message);
 });
 // här kan du också skriva CQL frågor (item="sten yxa" AND place=gotland)
- (sochSearch('huddinge').then(data => {
+ (sochSearch(name).then(data => {
      console.log(people)
     // loopa igenom snygg fin JavaScript array med listade object
      for (i=0;i<data.length; i++){
@@ -35,7 +45,8 @@ fetchSoch('http://kulturarvsdata.se/raa/bbrp/21620000011565').then(data => {
         // document.querySelector('.elementId4').innerText = record['pres:description'];
         
     }}));
-// }).catch(reason => {
-//     // nätverksfel av någon typ
-//     console.error(reason.message);
-//     });
+//  }).catch(reason => {
+//      // nätverksfel av någon typ
+//      console.error(reason.message);
+//      });
+});
