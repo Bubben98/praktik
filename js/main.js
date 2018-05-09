@@ -1,3 +1,4 @@
+// Geolocation funktion, behandlar plats ko-ordinater
 function getLocation() {
     
    geocoder = new google.maps.Geocoder();
@@ -43,7 +44,7 @@ function getLocation() {
                        document.getElementById("name").innerHTML = city.long_name;
                        Cookies.set('_username', city.long_name);
                        location.reload();
-                    //    document.getElementById("name").innerHTML = city.long_name;
+
                    } else {
                        alert("No results found");
                    }
@@ -66,30 +67,20 @@ function getLocation() {
        }).catch(reason => {
            console.error(reason.message);
        });
-       // här kan du också skriva CQL frågor (item="sten yxa" AND place=gotland)
+       // här behandlas söktermen
         (sochSearch(name).then(data => {
-            console.log(people)
+            console.log(results)
            // loopa igenom snygg fin JavaScript array med listade object
             for (i=0;i<data.length; i++){
                var record = data[i];
-               // logga objekt
-               console.log(record);
-               // skriv ut specifikt element ur objektet
-               // console.log(record['pres:dataQuality']);
-               // skriv ut specifikt element till HTML
-               // document.querySelector('.elementId1').innerText = record['pres:itemLabel'];
-               people.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
-       
+
+               results.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
                link: record['pres:representations']['pres:representation'][0]['content']});
-       
-               // document.querySelector('.elementId2').src = record['pres:image']['pres:src'][0]['content'];
-               // document.querySelector('.elementId2').value = record['pres:image']['pres:src'][0]['type'];
-               // document.querySelector('.elementId3').href = record['pres:representations']['pres:representation'][0]['content'];
-               // document.querySelector('.elementId4').innerText = record['pres:description'];
                
            }}));
 }
 
+// Ger en sökterm som användaren skrivit in
 $(document).ready(function () {
     var name = Cookies.get('_username');
     if (name) {
@@ -116,26 +107,15 @@ fetchSoch('http://kulturarvsdata.se/raa/bbrp/21620000011565').then(data => {
 }).catch(reason => {
     console.error(reason.message);
 });
-// här kan du också skriva CQL frågor (item="sten yxa" AND place=gotland)
+// här behandlas söktermen
  (sochSearch(name).then(data => {
-     console.log(people)
+     console.log(results)
     // loopa igenom snygg fin JavaScript array med listade object
      for (i=0;i<data.length; i++){
         var record = data[i];
-        // logga objekt
-        console.log(record);
-        // skriv ut specifikt element ur objektet
-        // console.log(record['pres:dataQuality']);
-        // skriv ut specifikt element till HTML
-        // document.querySelector('.elementId1').innerText = record['pres:itemLabel'];
-        people.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
-
+        
+        results.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
         link: record['pres:representations']['pres:representation'][0]['content']});
-
-        // document.querySelector('.elementId2').src = record['pres:image']['pres:src'][0]['content'];
-        // document.querySelector('.elementId2').value = record['pres:image']['pres:src'][0]['type'];
-        // document.querySelector('.elementId3').href = record['pres:representations']['pres:representation'][0]['content'];
-        // document.querySelector('.elementId4').innerText = record['pres:description'];
         
     }}));
 });
