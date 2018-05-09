@@ -1,6 +1,6 @@
 console.log('running ko script')
     var MyViewModel= function() {
-        this.people = ko.observableArray([
+        this.results = ko.observableArray([
             
         ])
     }

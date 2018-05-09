@@ -69,12 +69,12 @@ function getLocation() {
        });
        // här behandlas söktermen
         (sochSearch(name).then(data => {
-            console.log(people)
+            console.log(results)
            // loopa igenom snygg fin JavaScript array med listade object
             for (i=0;i<data.length; i++){
                var record = data[i];
 
-               people.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
+               results.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
                link: record['pres:representations']['pres:representation'][0]['content']});
                
            }}));
@@ -109,12 +109,12 @@ fetchSoch('http://kulturarvsdata.se/raa/bbrp/21620000011565').then(data => {
 });
 // här behandlas söktermen
  (sochSearch(name).then(data => {
-     console.log(people)
+     console.log(results)
     // loopa igenom snygg fin JavaScript array med listade object
      for (i=0;i<data.length; i++){
         var record = data[i];
         
-        people.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
+        results.push({title: record['pres:itemLabel'], description: record['pres:description'], image: record['pres:image']['pres:src'][0]['content'],
         link: record['pres:representations']['pres:representation'][0]['content']});
         
     }}));
